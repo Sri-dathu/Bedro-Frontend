@@ -8,7 +8,7 @@ import tsConfigPaths from "vite-tsconfig-paths";
 
 // Plain TanStack Start + Vite setup (no hosted-platform wrapper).
 // Dev server: http://localhost:8080 — the backend's CORS allow-list (APP_CORS_ORIGINS) expects this port.
-// Production build: Nitro "node-server" → run with `node .output/server/index.mjs`.
+// Production build: Nitro "netlify" preset → static assets in dist/, SSR function in .netlify/functions-internal/.
 export default defineConfig(({ command }) => ({
   server: { host: "::", port: 8080 },
   resolve: {
